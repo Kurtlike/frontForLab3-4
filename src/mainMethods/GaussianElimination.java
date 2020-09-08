@@ -10,6 +10,7 @@ public class GaussianElimination {
         this.size=size;
         solve();
         getReverse();
+
     }
     private void solve(){
         for(int i=0;i<size-1;i++){

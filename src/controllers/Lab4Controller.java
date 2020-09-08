@@ -61,7 +61,7 @@ public class Lab4Controller {
         performButton.setOnAction(actionEvent -> {
             Fields fields=new Fields(xCoord,yCoord,accuracy,xEnd,logger);
             IOData ioData=new IOData(fields.getvalueOfXCoord(),fields.getvalueOfYCoord(),fields.getValueOfAccuracy(),fields.getValueOfXEnd(),boxes.getSelectedFunction());
-            chart.setChart(ioData.getAnswer().getDotsForInterpolate(),ioData.getAnswer().getSourceFunction());
+            chart.setChart(ioData.getRungeAnswer().getDotsForInterpolate(),ioData.getRungeAnswer().getSourceFunction(),ioData.getRungeAnswer().getNewPoints());
             logger.setLogs();
         });
     }

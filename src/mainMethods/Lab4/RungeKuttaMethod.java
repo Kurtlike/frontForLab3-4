@@ -4,7 +4,7 @@ public class RungeKuttaMethod {
     private double[][] dotsForInterpolate;
     private double[][] sourceFunction;
     private double[] kCoef=new double[4];
-    private double h=0.11;
+    private double h=0.2;
     private double error=100;
     private double startX;
     private double startY;
@@ -21,7 +21,7 @@ public class RungeKuttaMethod {
         createSourceFunction();
     }
     public void solveDE(){
-        while (accuracy<error){
+        while (accuracy<Math.abs(error)){
             h-=0.01;
             getKCoef(startX,startY);
             error=getExactSolution(startX+h)-(startY+(kCoef[0]+2*kCoef[1]+2*kCoef[2]+kCoef[3])/6);
@@ -78,5 +78,9 @@ public class RungeKuttaMethod {
             sourceFunction[i][1]=getExactSolution(dot);
             dot+=0.01;
         }
+    }
+
+    public double getH() {
+        return h;
     }
 }

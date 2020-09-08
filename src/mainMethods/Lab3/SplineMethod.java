@@ -120,7 +120,7 @@ public class SplineMethod {
             dot += 0.01;
             newPoints[i][0]=dot;
             for(int k=0;k<19;k++) {
-                if (dot > startingPoints[k][0] && dot < startingPoints[k + 1][0]) {
+                if (dot > startingPoints[k][0] && dot <= startingPoints[k + 1][0]) {
                     newPoints[i][1] =aCoef[k]+bCoef[k]*(dot-startingPoints[k][0])+cCoef[k]*Math.pow((dot-startingPoints[k][0]),2)+dCoef[k]*Math.pow((dot-startingPoints[k][0]),3);
                 }
             }
