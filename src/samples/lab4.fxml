@@ -33,8 +33,8 @@
                   <Cursor fx:constant="NONE" />
                </cursor>
             </TextArea>
-            <ChoiceBox fx:id="functionChoose" layoutX="23.0" layoutY="46.0" prefWidth="150.0" />
-            <Text fill="#e8e2e1" fontSmoothingType="LCD" layoutX="25.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберете уравнение" wrappingWidth="255.0">
+            <ChoiceBox fx:id="functionChoose" layoutX="8.0" layoutY="45.0" prefWidth="150.0" />
+            <Text fill="#e8e2e1" fontSmoothingType="LCD" layoutX="8.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберете уравнение и метод " wrappingWidth="255.0">
                <font>
                   <Font name="Ubuntu" size="16.0" />
                </font>
@@ -51,13 +51,14 @@
                </font>
             </Button>
             <TextField fx:id="yCoord" layoutX="159.0" layoutY="135.0" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" />
-            <Text fill="#e8e2e1" fontSmoothingType="LCD" layoutX="23.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите конец отрезка и точность приближения" wrappingWidth="213.0">
+            <Text fill="#e8e2e1" fontSmoothingType="LCD" layoutX="23.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите конец отрезка и шаг" wrappingWidth="213.0">
                <font>
                   <Font name="Ubuntu" size="16.0" />
                </font>
             </Text>
             <TextField layoutX="25.0" layoutY="233.0" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" fx:id="xEnd" />
             <TextField fx:id="accuracy" layoutX="159.0" layoutY="233.0" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" />
+            <ChoiceBox fx:id="methodChoose" layoutX="158.0" layoutY="45.0" prefHeight="26.0" prefWidth="139.0" />
          </children>
       </AnchorPane>
    </children>

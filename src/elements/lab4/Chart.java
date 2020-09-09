@@ -10,15 +10,10 @@ public class Chart {
         this.graph=graph;
     }
 
-    public void setChart(double[][] dots,double[][] sourceFunction,double[][] newFunction){
-        XYChart.Series<Number,Number> sourceSeries = new XYChart.Series<>();
+    public void setChart(double[][] dots,double[][] newFunction){
         XYChart.Series<Number,Number> newSeries = new XYChart.Series<>();
         graph.getData().clear();
         graph.setCreateSymbols(false);
-        for(double []k:sourceFunction){
-            sourceSeries.getData().add(new XYChart.Data<>(k[0], k[1]));
-        }
-        graph.getData().addAll(sourceSeries);
         for(double []k:newFunction){
             newSeries.getData().add(new XYChart.Data<>(k[0], k[1]));
         }

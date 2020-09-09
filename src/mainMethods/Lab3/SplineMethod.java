@@ -3,6 +3,7 @@ package mainMethods.Lab3;
 import mainMethods.GaussianElimination;
 
 public class SplineMethod {
+    private double Y;
     private double[][] startingPoints;
     private double[][] newPoints;
     private double[][] sourceFunction;
@@ -123,6 +124,9 @@ public class SplineMethod {
                 if (dot > startingPoints[k][0] && dot <= startingPoints[k + 1][0]) {
                     newPoints[i][1] =aCoef[k]+bCoef[k]*(dot-startingPoints[k][0])+cCoef[k]*Math.pow((dot-startingPoints[k][0]),2)+dCoef[k]*Math.pow((dot-startingPoints[k][0]),3);
                 }
+                if ( dot <=desiredValue) {
+                    Y=newPoints[i][1];
+                }
             }
 
         }
@@ -135,5 +139,9 @@ public class SplineMethod {
     }
     public double[][] getSourceFunction() {
         return sourceFunction;
+    }
+
+    public double getY() {
+        return Y;
     }
 }

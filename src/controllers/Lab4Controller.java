@@ -32,6 +32,8 @@ public class Lab4Controller {
 
     @FXML
     private ChoiceBox<String> functionChoose;
+    @FXML
+    private ChoiceBox<String> methodChoose;
 
     @FXML
     private TextField xCoord;
@@ -55,13 +57,13 @@ public class Lab4Controller {
             stage.close();
         });
         Logger logger=new Logger(logArea);
-        Boxes boxes=new Boxes(functionChoose);
+        Boxes boxes=new Boxes(functionChoose,methodChoose);
 
         Chart chart=new Chart(graph);
         performButton.setOnAction(actionEvent -> {
             Fields fields=new Fields(xCoord,yCoord,accuracy,xEnd,logger);
-            IOData ioData=new IOData(fields.getvalueOfXCoord(),fields.getvalueOfYCoord(),fields.getValueOfAccuracy(),fields.getValueOfXEnd(),boxes.getSelectedFunction());
-            chart.setChart(ioData.getRungeAnswer().getDotsForInterpolate(),ioData.getRungeAnswer().getSourceFunction(),ioData.getRungeAnswer().getNewPoints());
+            IOData ioData=new IOData(fields.getvalueOfXCoord(),fields.getvalueOfYCoord(),fields.getValueOfAccuracy(),fields.getValueOfXEnd(),boxes.getSelectedFunction(),boxes.getSelectedMethod());
+            chart.setChart(ioData.getAnswer().getDotsForInterpolate(),ioData.getAnswer().getNewPoints());
             logger.setLogs();
         });
     }

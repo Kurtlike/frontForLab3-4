@@ -14,6 +14,7 @@ public class IOData {
         answer.setSourceFunction(splineMethod.getSourceFunction());
         answer.setNewPoints(splineMethod.getNewPoints());
         answer.setDots(splineMethod.getStartingPoints());
+        answer.setAnswer(splineMethod.getY());
         return answer;
     }
 }

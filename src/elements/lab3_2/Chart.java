@@ -19,8 +19,9 @@ public class Chart {
             sourceSeries.getData().add(new XYChart.Data<>(k[0], k[1]));
         }
         graph.getData().addAll(sourceSeries);
-        for(double []k:newFunction){
-            newSeries.getData().add(new XYChart.Data<>(k[0], k[1]));
+        for(int i=0;i<newFunction.length-1;i++){
+            newSeries.getData().add(new XYChart.Data<>(newFunction[i][0], newFunction[i][1]));
+
         }
         graph.getData().addAll(newSeries);
         for(double []k:dots){

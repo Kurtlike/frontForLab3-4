@@ -52,6 +52,7 @@ public class Lab3_2Controller {
             logger.setLogs();
             IOData data=new IOData(xField.getvalueOfXCoord(),boxes.getSelectedFunction());
             chart.setChart(data.getAnswer().getSourceFunction(),data.getAnswer().getNewPoints(),data.getAnswer().getDots());
+            logger.setLog("y="+data.getAnswer().getAnswer());
         });
     }
 }
