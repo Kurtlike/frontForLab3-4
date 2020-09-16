@@ -38,19 +38,21 @@ public class Lab3_2Controller {
     @FXML
     public Button closeButton;
     @FXML
+    private ChoiceBox<String> dataChoose;
+    @FXML
     void initialize(){
         closeButton.setOnAction(actionEvent -> {
             Stage stage = (Stage) closeButton.getScene().getWindow();
             stage.close();
         });
         Logger logger=new Logger(logArea);
-        Boxes boxes=new Boxes(functionChoose);
+        Boxes boxes=new Boxes(functionChoose,dataChoose);
 
         Chart chart=new Chart(graph);
         performButton.setOnAction(actionEvent -> {
             XField xField=new XField(xCoord,logger);
             logger.setLogs();
-            IOData data=new IOData(xField.getvalueOfXCoord(),boxes.getSelectedFunction());
+            IOData data=new IOData(xField.getvalueOfXCoord(),boxes.getSelectedFunction(),boxes.getSelectedData());
             chart.setChart(data.getAnswer().getSourceFunction(),data.getAnswer().getNewPoints(),data.getAnswer().getDots());
             logger.setLog("y="+data.getAnswer().getAnswer());
         });

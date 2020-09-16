@@ -31,15 +31,21 @@
                         <Font name="Ubuntu" size="16.0" />
                     </font>
                 </Text>
-                <Button fx:id="performButton" layoutX="38.0" layoutY="180.0" mnemonicParsing="false" style="-fx-background-color: #9E9AA1;" text="Найти значение в точке X " textFill="WHITE">
+                <Button fx:id="performButton" layoutX="39.0" layoutY="255.0" mnemonicParsing="false" style="-fx-background-color: #9E9AA1;" text="Найти значение в точке X " textFill="WHITE">
                     <font>
                         <Font name="Ubuntu" size="16.0" />
                     </font>
                 </Button>
-                <TextArea fx:id="logArea" layoutX="13.0" layoutY="224.0" prefHeight="336.0" prefWidth="270.0">
+                <TextArea fx:id="logArea" layoutX="13.0" layoutY="302.0" prefHeight="258.0" prefWidth="274.0">
                     <cursor>
                         <Cursor fx:constant="NONE" />
                     </cursor></TextArea>
+            <Text fill="#e8e2e1" fontSmoothingType="LCD" layoutX="42.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберете набор данных" wrappingWidth="213.0">
+               <font>
+                  <Font name="Ubuntu" size="16.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="dataChoose" layoutX="44.0" layoutY="221.0" prefHeight="26.0" prefWidth="213.0" />
             </children>
         </AnchorPane>
         <LineChart fx:id="graph" createSymbols="false" horizontalGridLinesVisible="false" layoutX="300.0" layoutY="42.0" legendVisible="false" prefHeight="479.0" prefWidth="479.0" verticalGridLinesVisible="false">
